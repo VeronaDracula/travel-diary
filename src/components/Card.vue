@@ -1,11 +1,13 @@
 <script setup>
-const props = defineProps(['img','title'])
+const props = defineProps(['img', 'title', 'id']);
+
+const path = `/country/${props.id}`;
 
 </script>
 
 <template>
     <li class="card">
-        <a class="card__link" href="#">
+        <RouterLink class="card__link" :to="path">
             <div class="card__main">
                 <img class="card__flag" :src="img" alt="">
                 <h2 class="card__title">{{ title }}</h2>
@@ -18,7 +20,7 @@ const props = defineProps(['img','title'])
                     Оценка: 4.5
                 </li>
             </ul>
-        </a>
+        </RouterLink>
     </li>
 </template>
 

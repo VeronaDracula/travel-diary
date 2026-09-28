@@ -11,10 +11,10 @@ import Flag4 from '../assets/images/tz.png'
 
 <template>
     <ul class="cards">
-        <Card :img="Flag1" title="Босния и Герцеговина"/>
-        <Card :img="Flag2" title="Кипр"/>
-        <Card :img="Flag3" title="Непал"/>
-        <Card :img="Flag4" title="Танзания"/>
+        <Card :img="Flag1" title="Босния и Герцеговина" id="1"/>
+        <Card :img="Flag2" title="Кипр" id="2"/>
+        <Card :img="Flag3" title="Непал" id="3"/>
+        <Card :img="Flag4" title="Танзания" id="4"/>
     </ul>
 </template>
 

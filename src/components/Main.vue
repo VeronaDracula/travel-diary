@@ -1,11 +1,10 @@
 <script setup>
-import CardList from './CardList.vue';
+
 </script>
 
 <template>
     <main class="main">
-        <CardList/>
-        
+        <slot></slot>
     </main>
 </template>
 
