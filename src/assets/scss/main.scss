@@ -1,0 +1,23 @@
+@use "./variables" as *;
+@use "../vendor/normalize";
+
+#app {
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    background: $dark-base;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    max-width: 880px;
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
