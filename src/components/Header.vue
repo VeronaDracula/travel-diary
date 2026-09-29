@@ -4,10 +4,10 @@ import Logo from '../assets/images/logo.png'
 
 <template>
     <header class="header">
-        <div class="header__box">
+        <RouterLink class="header__box" to="/">
             <img class="header__logo" :src="Logo" alt="логотип" />
             <h1 class="header__title">Дневник путешествий</h1>
-        </div>
+        </RouterLink>
         <button class="header__add-btn" type="button"></button>
     </header>
 </template>
@@ -30,6 +30,7 @@ import Logo from '../assets/images/logo.png'
     display: flex;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
 }
 
 .header__logo {

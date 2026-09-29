@@ -1,9 +1,11 @@
 <script setup>
+import CountryArticle from '../components/CountryArticle.vue';
 
 </script>
 
 <template>
-    
+    <CountryArticle />
+
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>
