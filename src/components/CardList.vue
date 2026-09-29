@@ -1,20 +1,18 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import Card from './Card.vue';
+import { useCountriesStore } from '@/stores/countriesList.js';
 
-import Flag1 from '../assets/images/ba.png'
-import Flag2 from '../assets/images/cy.png'
-import Flag3 from '../assets/images/np.png'
-import Flag4 from '../assets/images/tz.png'
+
+const countriesStore = useCountriesStore();
+const { cards } = storeToRefs(countriesStore);
 
 </script>
 
 <template>
     <ul class="cards">
-        <Card :img="Flag1" title="Босния и Герцеговина" id="1"/>
-        <Card :img="Flag2" title="Кипр" id="2"/>
-        <Card :img="Flag3" title="Непал" id="3"/>
-        <Card :img="Flag4" title="Танзания" id="1"/>
+        <Card v-for="card in cards" :key="card.id" :id="card.id" :flag="card.flag" :name="card.name"
+            :visits="card.visits" :rating="card.rating" />
     </ul>
 </template>
 

@@ -1,5 +1,11 @@
 <script setup>
-const props = defineProps(['img', 'title', 'id']);
+const props = defineProps({
+    id: String,
+    flag: String,
+    name: String,
+    visits: Object,
+    rating: String
+});
 
 const path = `/country/${props.id}`;
 
@@ -9,15 +15,15 @@ const path = `/country/${props.id}`;
     <li class="card">
         <RouterLink class="card__link" :to="path">
             <div class="card__main">
-                <img class="card__flag" :src="img" alt="">
-                <h2 class="card__title">{{ title }}</h2>
+                <img class="card__flag" :src="props.flag" alt="">
+                <h2 class="card__title">{{ name }}</h2>
             </div>
             <ul class="card__info">
                 <li class="card__info-item">
-                    Количество посещений: 2
+                    Количество посещений: {{ visits.length }}
                 </li>
                 <li class="card__info-item">
-                    Оценка: 4.5
+                    Оценка: {{ rating }}
                 </li>
             </ul>
         </RouterLink>

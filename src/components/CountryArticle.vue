@@ -1,21 +1,29 @@
 <script setup>
+import { ref, reactive, watch } from 'vue';
+import { storeToRefs } from 'pinia'
+import { useCountryStore } from '@/stores/country.js';
+import { useRoute } from 'vue-router'
 
-import Flag1 from '../assets/images/ba.png';
-import imgV from '../assets/images/img-v.jpg';
-import imgG from '../assets/images/img-g.jpg';
+
+const route = useRoute()
+const id = route.params.id
+
+const countryStore = useCountryStore();
+countryStore.getCountry(id);
+const { country } = storeToRefs(countryStore);
 
 </script>
 
 <template>
     <section class="country">
         <div class="country__main-box">
-            <h2 class="country__name">Босния и Герцеговина</h2>
+            <h2 class="country__name">{{ country.name }}</h2>
 
             <div class="country__section">
                 <h3 class="country__title">Города</h3>
                 <ul class="country__list">
-                    <li class="country__list-item">
-                        Вызима
+                    <li v-for="city in country.cities" class="country__list-item">
+                        {{ city }}
                     </li>
                 </ul>
             </div>
@@ -23,42 +31,32 @@ import imgG from '../assets/images/img-g.jpg';
             <div class="country__section">
                 <h3 class="country__title">Посещения</h3>
                 <ul class="country__list">
-                    <li class="country__list-item">
-                        март 2020
-                    </li>
-                    <li class="country__list-item">
-                        апрель 2025
+                    <li v-for="visit in country.visits" class="country__list-item">
+                        {{ visit }}
                     </li>
                 </ul>
             </div>
 
-            <div class="country__section">
+            <div class="country__section" v-if="country?.text !== ''">
                 <h3 class="country__title">Впечатления</h3>
                 <p class="country__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {{ country.text }}
                 </p>
             </div>
 
-            <div class="country__section">
+            <div class="country__section" v-if="country?.photos?.length > 0">
                 <h3 class="country__title">Галерея</h3>
                 <div class="country__gallery">
-                    <img class="country__photo" :src="imgV" alt="">
-                    <img class="country__photo" :src="imgG" alt="">
-                    <img class="country__photo" :src="imgV" alt="">
+                    <img class="country__photo"  alt="">
+                    <img class="country__photo"  alt="">
+                    <img class="country__photo"  alt="">
                 </div>
             </div>
         </div>
 
         <div class="country__side-box">
-            <img class="country__flag" :src="Flag1" alt="">
-            <div class="country__rating"></div>
+            <img class="country__flag" :src="country.flag"  alt="">
+            <div class="country__rating">{{ country.rating }}</div>
         </div>
     </section>
 </template>
