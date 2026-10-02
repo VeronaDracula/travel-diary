@@ -10,6 +10,6 @@
 
 <style scoped>
 .main {
-    padding-top: 70px;
+    padding-top: 50px;
 }
 </style>

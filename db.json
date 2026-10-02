@@ -1,53 +1,80 @@
 {
   "countries": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Босния и Герцеговина",
       "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, totam. Tempora animi, ratione pariatur nulla quas aliquam iure temporibus fugiat voluptates illum? In impedit culpa nihil veritatis minima esse eveniet!",
       "flag": "/src/assets/images/flags/ba.png",
       "rating": "4",
-      "cities": ["Сараево", "Мостар"],
-      "visits": ["март 2020", "апрель 2025"],
+      "cities": [
+        "Сараево",
+        "Мостар"
+      ],
+      "visits": [
+        "март 2020",
+        "апрель 2025"
+      ],
       "photos": []
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Кипр",
       "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, totam. Tempora animi, ratione pariatur nulla quas aliquam iure temporibus fugiat voluptates illum? In impedit culpa nihil veritatis minima esse eveniet!",
       "flag": "/src/assets/images/flags/cy.png",
       "rating": "4.5",
-      "cities": ["Никосия", "Пафос", "Фамагуста"],
-      "visits": ["июнь 2021", "июль 2020", "август 2025"],
+      "cities": [
+        "Никосия",
+        "Пафос",
+        "Фамагуста"
+      ],
+      "visits": [
+        "июнь 2021",
+        "июль 2020",
+        "август 2025"
+      ],
       "photos": []
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Непал",
       "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, totam. Tempora animi, ratione pariatur nulla quas aliquam iure temporibus fugiat voluptates illum? In impedit culpa nihil veritatis minima esse eveniet!",
       "flag": "/src/assets/images/flags/np.png",
       "rating": "4",
-      "cities": ["Катманду", "Лукла"],
-      "visits": ["май 2023"],
+      "cities": [
+        "Катманду",
+        "Лукла"
+      ],
+      "visits": [
+        "май 2023"
+      ],
       "photos": []
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Танзания",
       "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, totam. Tempora animi, ratione pariatur nulla quas aliquam iure temporibus fugiat voluptates illum? In impedit culpa nihil veritatis minima esse eveniet!",
       "flag": "/src/assets/images/flags/tz.png",
       "rating": "4",
-      "cities": ["Занзибар"],
-      "visits": ["декабрь 2023"],
+      "cities": [
+        "Занзибар"
+      ],
+      "visits": [
+        "декабрь 2023"
+      ],
       "photos": []
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Монголия",
       "text": "",
       "flag": "/src/assets/images/flags/mn.png",
       "rating": "4",
-      "cities": ["Улан-Батор"],
-      "visits": ["август 2024"],
+      "cities": [
+        "Улан-Батор"
+      ],
+      "visits": [
+        "август 2024"
+      ],
       "photos": []
     }
   ],

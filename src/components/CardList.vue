@@ -8,11 +8,10 @@ const countriesStore = useCountriesStore();
 const { cards } = storeToRefs(countriesStore);
 
 </script>
-
 <template>
     <ul class="cards">
         <Card v-for="card in cards" :key="card.id" :id="card.id" :flag="card.flag" :name="card.name"
-            :visits="card.visits" :rating="card.rating" />
+            :visits="card.visits" :rating="String(card.rating)" />
     </ul>
 </template>
 
