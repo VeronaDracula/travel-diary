@@ -76,10 +76,28 @@
         "август 2024"
       ],
       "photos": []
+    },
+    {
+      "name": "Индонезия",
+      "flag": "/src/assets/images/flags/id.png",
+      "visits": [
+        "ыафа",
+        "фыафа"
+      ],
+      "rating": 3.5,
+      "id": "0-7wUzOCzxw"
+    },
+    {
+      "name": "",
+      "flag": "",
+      "visits": [],
+      "rating": 0,
+      "id": "njiMpufEep4"
     }
   ],
   "info": {
     "img": "",
     "text": ""
-  }
+  },
+  "$schema": "./node_modules/json-server/schema.json"
 }

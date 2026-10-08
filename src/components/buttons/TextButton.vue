@@ -1,13 +1,17 @@
 <script setup>
 const props = defineProps({
-    text: String
+    text: String,
+    width: String
 });
 
+function btnClass() {
+    return `${props.width}`;
+}
 
 </script>
 
 <template>
-    <button class="text-btn" type="button">{{ text }}</button>
+    <button class="text-btn" :class="btnClass()" type="button">{{ text }}</button>
 </template>
 
 <style lang="scss" scoped>
@@ -37,6 +41,10 @@ const props = defineProps({
         @include font-18px;
         width: 180px;
         height: 46px;
+
+        &.small {
+            width: 100px;
+        }
     }
 }
 </style>

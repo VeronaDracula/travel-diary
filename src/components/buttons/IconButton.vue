@@ -45,5 +45,15 @@ function btnClass() {
             height: 20px;
         }
     }
+
+    &--edit {
+        background: transparent center no-repeat url("../../assets/images/icons/edit-icon.svg");
+        background-size: 20px;
+    }
+
+    &--delete {
+        background: transparent center no-repeat url("../../assets/images/icons/delete.svg");
+        background-size: 20px;
+    }
 }
 </style>
